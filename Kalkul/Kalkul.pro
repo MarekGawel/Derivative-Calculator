@@ -6,10 +6,12 @@ CONFIG -= qt
 SOURCES += main.cpp \
     Struktura.cpp \
     Tablica.cpp \
-    pliki.cpp
+    pliki.cpp \
+    wielomiany.cpp
 
 HEADERS += \
     Struktura.h \
     Tablica.h \
-    pliki.h
+    pliki.h \
+    wielomiany.h
 

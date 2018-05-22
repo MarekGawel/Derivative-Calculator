@@ -6,5 +6,6 @@
 #include <cmath>
 
 void wrzuc(string wczytanie, Lista *&tab );
+void Drukuj(Lista *tab, int dlugosc);
 
 #endif // TABLICA_H

@@ -2,6 +2,7 @@
 #include "Struktura.h"
 #include "Tablica.h"
 #include "pliki.h"
+#include "wielomiany.h"
 
 using namespace std;
 
@@ -9,20 +10,32 @@ using namespace std;
 
 int main()
 {
+    cout<<"INSTRUKCJA: \nWpisz wzór w postaci '3+3(x2)+5(x18)=', gdy f(x)=3+3*x^2+5*x^18"<<endl;
+    cout<<"--------------------------------------------------------------------------------"<<endl;
     string wzor;
     zCzego(wzor);
     int len=wzor.size()-1;
-    Lista *tab =new Lista[len];
+    Lista *tab;
+    cout<<len<<"<-Liczba elementow"<<endl;
+    tab=new Lista[len];
+
 
     wrzuc(wzor, tab);
+    cout<<"tablica:"<<endl;
+    Drukuj(tab,len);
 
-    for(int i=0;i<len;i++)
-    {
-        if(tab[i].znak=='q')
-            cout<<tab[i].liczba<<' '<<endl;
-        else
-            cout<<tab[i].znak<<' '<<endl;
-    }
+    Pochodnuj(tab, len);
+
+
+      cout<<"pochodna:"<<endl;
+      Drukuj(tab,len);
+      cout<<endl;
+      cout<<"spr"<<endl;
+
+
+    delete []tab;
+
+
 
 
 

@@ -11,6 +11,7 @@ struct Lista
     char znak;
     int liczba;
     string funkcja;
+    bool czyPochodnic=true;
 };
 
 

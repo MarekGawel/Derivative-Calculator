@@ -43,7 +43,7 @@ void wrzuc(string wczytanie,Lista *&tab)
             tab[i].znak='q';
 
             tab[i].liczba=toInt(wczytanie, k);
-            cout<<tab[i].liczba<<endl;
+            //cout<<tab[i].liczba<<endl;
 
 
 
@@ -66,10 +66,10 @@ void Drukuj(Lista *tab, int dlugosc)
         if(tab[i].funkcja=="nie") continue;
         if(tab[i].znak=='q')
         {
-//            if(tab[i].liczba==-1)
-//            {
-//                cout<<tab[i].funkcja;
-//            }
+            if(tab[i].liczba==-1)
+            {
+                cout<<tab[i].funkcja;
+            }
             cout<<tab[i].liczba<<' ';
 
         }

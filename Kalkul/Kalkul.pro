@@ -7,11 +7,13 @@ SOURCES += main.cpp \
     Struktura.cpp \
     Tablica.cpp \
     pliki.cpp \
-    wielomiany.cpp
+    wielomiany.cpp \
+    funkcje.cpp
 
 HEADERS += \
     Struktura.h \
     Tablica.h \
     pliki.h \
-    wielomiany.h
+    wielomiany.h \
+    funkcje.h
 

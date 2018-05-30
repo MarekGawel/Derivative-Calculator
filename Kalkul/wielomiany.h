@@ -2,6 +2,9 @@
 #define WIELOMIANY_H
 #include <iostream>
 #include "Struktura.h"
+#include "funkcje.h"
+
+
 
 void Pochodnuj(Lista *&tablica, int dlugosc );
 

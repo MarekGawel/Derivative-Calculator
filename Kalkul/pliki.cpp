@@ -1,4 +1,3 @@
-
 #include "pliki.h"
 
 using namespace std;

@@ -10,17 +10,23 @@ void Pochodnuj(Lista *&tablica, int dlugosc )
     {
         if(tablica[i].czyPochodnic)
         {
-            if(tablica[i].znak=='q' && tablica[i].znak==-1)
+            if(tablica[i].funkcja=="sin" ||tablica[i].funkcja=="cos"||tablica[i].funkcja=="ln")
                 jakSaFunkcje(tablica, i);
 
-            if(tablica[i].znak=='x' )
+            else if(tablica[i].znak=='x' )
             {
                 //jezeli przed jest liczba, lub znak + czy - tj. x w pierwszej potedze
                 if(tablica[i-1].znak=='q' || tablica[i-1].znak=='+' || tablica[i-1].znak=='-' || i==0)
                 {
+
+
+
                     //przed jest liczba
                     if(tablica[i-1].znak=='q')
                         tablica[i].funkcja=="nie";
+
+
+
                     // przed jest operator
                     else
                     {
@@ -74,56 +80,7 @@ void Pochodnuj(Lista *&tablica, int dlugosc )
 
 
 
-
-
-
-
-
-            //NP (x3) lub x
-            //            if(tablica[i].znak=='(' )
-            //            {
-
-
-            //                if(tablica[i].znak=='(')
-            //                {
-
-            //                    if(i==0)
-            //                    {
-            //                        cout<<tablica[i+2].liczba;
-            //                        tablica[i+2].liczba--;
-
-            //                    }
-            //                    else
-            //                    {
-            //                        //if i!=0
-            //                        tablica[i-1].liczba=tablica[i-1].liczba*tablica[i+2].liczba;
-            //                        tablica[i+2].liczba--;
-            //                        if(tablica[i+2].liczba==0)
-            //                        {
-            //                            tablica[i].funkcja="nie";
-            //                            tablica[i+1].funkcja="nie";
-            //                            tablica[i+2].funkcja="nie";
-            //                            tablica[i+3].funkcja="nie";
-            //                        }
-            //                        if(tablica[i+2].liczba==1)
-            //                        {
-            //                            tablica[i].funkcja="nie";
-            //                            tablica[i+2].funkcja="nie";
-            //                            tablica[i+3].funkcja="nie";
-            //                        }
-            //                    }
-
-            //                }
-            //                else
-            //                {
-            //                    tablica[i].funkcja="nie";
-            //                    if(i==0 && tablica[i+1].znak!='-') tablica[i+1].funkcja="nie";
-            //                    else tablica[i-1].funkcja="nie";
-
-            //                }
-
-
-            //NP 654
+            //wyrazy wolne
             if(tablica[i].znak=='q' && tablica[i].liczba!=-1)
             {
                 if(tablica[i+1].znak!='(' && tablica[i-1].znak!='x' &&tablica[i+1].znak!='x')

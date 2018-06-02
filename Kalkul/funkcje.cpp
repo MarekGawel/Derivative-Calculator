@@ -8,12 +8,18 @@ void jakSaFunkcje(Lista*&tab, int i)
     }
     else if(tab[i].funkcja=="cos")
     {
-        tab[i-1].funkcja="nie";
-        tab[i].funkcja="-sin";
+        if(tab[i-1].znak!='q')
+            tab[i-1].funkcja="nie";
+        else
+            tab[i-2].funkcja="nie";
+
+        tab[i].funkcja="- sin";
     }
     else if(tab[i].funkcja=="ln")
     {
-        tab[i].funkcja="1/";
+        tab[i].funkcja="1 /";
+        tab[i+1].funkcja="nie";
+        tab[i+1].funkcja="nie";
     }
 
     tab[i+1].czyPochodnic=false;

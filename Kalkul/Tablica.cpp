@@ -36,6 +36,7 @@ void wrzuc(string wczytanie,Lista *&tab)
             if(wczytanie[k]=='s') tab[i].funkcja="sin";
             else if(wczytanie[k]=='c') tab[i].funkcja="cos";
             else if( wczytanie[k]=='l')tab[i].funkcja="ln";
+
             k++;
 
 
@@ -68,21 +69,25 @@ void Drukuj(Lista *tab, int dlugosc)
     {
         //cout<<tab[i].liczba<<endl;
         if(tab[i].funkcja=="nie") continue;
+
         else if(tab[i].funkcja=="druga opcja")
         {
             cout<<tab[i].liczba<<' '<<tab[i].znak<<' ';
         }
-        if(tab[i].znak=='q')
+        else if(tab[i].znak=='q')
         {
             if(tab[i].liczba==-1)
             {
-                cout<<tab[i].funkcja;
+                cout<<tab[i].funkcja<<' ';
             }
-            cout<<tab[i].liczba<<' ';
+            else
+                cout<<tab[i].liczba<<' ';
 
         }
         else
             cout<<tab[i].znak<<' ';
+        //cout<<tab[i].funkcja<<' ';
+        //cout<<tab[i].liczba<<' ';
     }
     cout<<endl;
 }

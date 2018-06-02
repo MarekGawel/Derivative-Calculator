@@ -3,5 +3,6 @@
 #include <iostream>
 #include "Struktura.h"
 
+void jakSaFunkcje(Lista*&tab, int i);
 
 #endif // FUNKCJE_H

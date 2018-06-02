@@ -1,6 +1,6 @@
 #include "funkcje.h"
 
-void jakSaFunkcje(Lista*&tab, int &i)
+void jakSaFunkcje(Lista*&tab, int i)
 {
     if(tab[i].funkcja=="sin")
     {
@@ -21,4 +21,5 @@ void jakSaFunkcje(Lista*&tab, int &i)
     tab[i+3].czyPochodnic=false;
 
 }
+
 

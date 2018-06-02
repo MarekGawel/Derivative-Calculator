@@ -17,3 +17,7 @@ HEADERS += \
     wielomiany.h \
     funkcje.h
 
+FORMS +=
+
+RESOURCES +=
+

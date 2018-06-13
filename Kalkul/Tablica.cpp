@@ -4,6 +4,12 @@
 
 using namespace std;
 
+/*!
+ * \brief toInt asdffghgdukgjhgfdsfghfdjgkjfjfhgrfeDFgzfhdjkgfdhsdgrefGRhtsjkdgjjfthdrgtseRWETRzydhtjykdg
+ * \param wzorek
+ * \param i/
+ * \return
+ */
 
 
 int toInt(string wzorek, int &i)
@@ -54,6 +60,11 @@ void wrzuc(string wczytanie,Lista *&tab)
         else
         {
             tab[i].znak=wczytanie[k];
+            if(wczytanie[k]=='x' && wczytanie[k-1]=='(' && wczytanie[k+1]==')' &&(wczytanie[k-2]!='c' || wczytanie[k-2]!='s'|| wczytanie[k-2]!='l'))
+            {
+                tab[i-1].funkcja="nie";
+                tab[i+1].funkcja="nie";
+            }
             tab[i].liczba=-1;
 
 
@@ -67,25 +78,27 @@ void Drukuj(Lista *tab, int dlugosc)
 {
     for(int i=0;i<dlugosc;i++)
     {
+
         //cout<<tab[i].liczba<<endl;
         if(tab[i].funkcja=="nie") continue;
 
         else if(tab[i].funkcja=="druga opcja")
         {
-            cout<<tab[i].liczba<<' '<<tab[i].znak<<' ';
+
+            cout<<tab[i].liczba<<tab[i].znak;
         }
         else if(tab[i].znak=='q')
         {
             if(tab[i].liczba==-1)
             {
-                cout<<tab[i].funkcja<<' ';
+                cout<<tab[i].funkcja;
             }
             else
-                cout<<tab[i].liczba<<' ';
+                cout<<tab[i].liczba;
 
         }
         else
-            cout<<tab[i].znak<<' ';
+            cout<<tab[i].znak;
         //cout<<tab[i].funkcja<<' ';
         //cout<<tab[i].liczba<<' ';
     }

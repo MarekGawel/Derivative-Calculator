@@ -13,6 +13,7 @@ void Pochodnuj(Lista *&tablica, int dlugosc )
             if(tablica[i].funkcja=="sin" ||tablica[i].funkcja=="cos"||tablica[i].funkcja=="ln")
                 jakSaFunkcje(tablica, i);
 
+            //JESLI JEST X
             else if(tablica[i].znak=='x' )
             {
                 //jezeli przed jest liczba, lub znak + czy - tj. x w pierwszej potedze
@@ -20,14 +21,13 @@ void Pochodnuj(Lista *&tablica, int dlugosc )
                 {
 
 
-
-                    //przed jest liczba
+                    //przed jest liczba -> 2x
                     if(tablica[i-1].znak=='q')
                         tablica[i].funkcja=="nie";
 
 
 
-                    // przed jest operator
+                    // przed jest operator -> 3+x
                     else
                     {
                         tablica[i].znak='q';
@@ -36,13 +36,13 @@ void Pochodnuj(Lista *&tablica, int dlugosc )
                 }
 
 
-                else if(tablica[i-1].znak=='(')
+                else if(tablica[i-1].znak=='(' )
                 {
-
+                    //przed nawiasem nie ma liczby -> 3+(x3)
                     if( tablica[i-2].znak!='q' )
                     {
                         tablica[i-1].funkcja=="druga opcja";
-                        tablica[i-1].liczba= (-1)*tablica[i+1].liczba;
+                        tablica[i-1].liczba= (-1)*tablica[i+1].liczba*tablica[i-1].liczba;
                         tablica[i+1].liczba--;
 
 
@@ -65,6 +65,7 @@ void Pochodnuj(Lista *&tablica, int dlugosc )
                 //sprawdzenie czy sie zeruje
                 if(tablica[i+1].liczba==0)
                 {
+
 
 
                     if(tablica[i-1].znak=='(')
